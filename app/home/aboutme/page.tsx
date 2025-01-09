@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function AboutmePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-6 py-12">
+    <div className="flex flex-col items-center justify-center  bg-gray-100 px-6 py-12">
       <div className="max-w-4xl text-center">
         {/* Header */}
-        <h2 className="text-3xl font-bold text-gray-800 md:text-4xl">
+        <h2 className="text-3xl font-bold text-gray-800 md:text-4xl text-shadow-pop-top">
           Cristian Moreno
         </h2>
         <p className="text-lg text-gray-500 mt-2">Full Stack Developer</p>

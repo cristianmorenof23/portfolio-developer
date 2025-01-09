@@ -14,7 +14,7 @@ export default function AuthLayout({
           {/* Logo */}
           <Link
             href={"/home/aboutme"}
-            className="hover:scale-125 transition-all"
+            className="hover:scale-125 transition-all slide-in-top"
           >
             <LogoTipo />
           </Link>

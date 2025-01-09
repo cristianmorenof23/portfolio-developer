@@ -13,12 +13,12 @@ export default function ProyectosPage() {
     <>
       <section className="container mx-auto max-w-screen-xl mb-56">
         <div className="container mx-auto p-6 mt-10">
-          <h1 className="flex items-center justify-center text-5xl font-serif text-center text-gray-900">
+          <h1 className="text-3xl font-bold text-gray-800 md:text-4xl text-center text-shadow-pop-top">
             Projects
           </h1>
         </div>
 
-        <div className="flex flex-wrap mt-7">
+        <div className="flex flex-wrap mt-7 fade-in">
           <div className="w-full flex  items-center justify-center flex-col  md:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-105 transition-all transform">
               <Link
