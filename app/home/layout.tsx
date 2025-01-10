@@ -10,7 +10,7 @@ export default function AuthLayout({
   return (
     <>
       <div className="flex min-h-screen flex-col">
-        <header className="flex items-center justify-around p-6 shadow-lg md:flex-row flex-col">
+        <header className="flex items-center justify-around p-2 shadow-lg md:flex-row flex-col">
           {/* Logo */}
           <Link
             href={"/home/aboutme"}
@@ -53,7 +53,7 @@ export default function AuthLayout({
 
         <footer className="flex justify-center bg-gray-900 px-4 py-12 font-sans tracking-wide text-white">
           <div className="text-center">
-            <h6 className="text-lg text-gray-300">Stay connected with us:</h6>
+            <h6 className="text-lg text-gray-300">Stay connected with me:</h6>
             <ul className="mb-8 mt-4 flex flex-wrap justify-center gap-4 gap-x-8">
               <div className="w-full flex justify-center gap-10">
                 <Link

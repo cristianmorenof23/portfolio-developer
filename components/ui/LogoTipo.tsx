@@ -4,11 +4,12 @@ export default function LogoTipo() {
   return (
     <>
         <Image
-          src="/crislogo.svg"
-          width={200}
-          height={200}
+          src="/cmf.png"
+          width={170}
+          height={170}
           alt="Logo Cristian Moreno"
           priority
+          className="hover:scale-110 transition-all"
         />
     </>
   );

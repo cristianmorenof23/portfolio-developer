@@ -13,7 +13,7 @@ export default function ProyectosPage() {
     <>
       <section className="container mx-auto max-w-screen-xl mb-56">
         <div className="container mx-auto p-6 mt-10">
-          <h1 className="text-3xl font-bold text-gray-800 md:text-4xl text-center text-shadow-pop-top">
+          <h1 className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand">
             Projects
           </h1>
         </div>
