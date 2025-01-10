@@ -121,7 +121,7 @@ export default function ProyectosPage() {
                   </h5>
                 </Link>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                  Restaurant Tip Calculator App
+                Application to calculate tips in a restaurant or business. 
                 </p>
 
                 <div className="flex items-center justify-center gap-2 mt-8">

@@ -66,7 +66,7 @@ export default function AuthLayout({
                     height={100}
                     src="/github-logo_icon-icons.com_73546.png"
                     alt="github logo"
-                    className="h-10 w-10 text-2xl transition hover:-translate-y-1 hover:scale-110"
+                    className="h-10 w-10 text-2xl transition hover:-translate-y-1 hover:scale-110 text-white invert"
                   />
                 </Link>
                 <Link
