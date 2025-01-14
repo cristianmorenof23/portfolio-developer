@@ -1,42 +1,53 @@
-import LogoTipo from "@/components/ui/LogoTipo";
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function AuthLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname(); // Obtén la ruta actual
+
   return (
     <>
       <div className="flex min-h-screen flex-col">
-        <header className="flex items-center justify-around p-2 shadow-lg md:flex-row flex-col">
+        <header className="flex items-center justify-around p-6 shadow-lg md:flex-row flex-col text-center">
           {/* Logo */}
           <Link
             href={"/home/aboutme"}
             className="hover:scale-125 transition-all slide-in-top"
           >
-            <LogoTipo />
+            <div className="glitch text-3xl" data-text="Cristian Moreno">
+              Cristian Moreno
+            </div>{" "}
           </Link>
 
           {/* Navigation */}
-          <nav className="flex gap-6 md:flex-row flex-col mt-4 w-full text-center md:w-auto">
+          <nav className="flex md:gap-10 md:flex-row gap-4 flex-col mt-4 w-full text-center md:w-auto">
             <Link
               href={"/home/aboutme"}
-              className="rounded px-3 py-2 font-serif text-lg transition-all hover:scale-125 hover:bg-purple-600 hover:shadow-lg"
+              className={`${
+                pathname === "/home/aboutme" ? "text-[#007bff]" : "text-gray-500"
+              } hover:text-[#007bff] block font-semibold text-[20px]`}
             >
               About Me
             </Link>
             <Link
               href={"/home/proyectos"}
-              className="rounded px-3 py-2 font-serif text-lg transition-all hover:scale-125 hover:bg-purple-600 hover:shadow-lg"
+              className={`${
+                pathname === "/home/proyectos" ? "text-[#007bff]" : "text-gray-500"
+              } hover:text-[#007bff] block font-semibold text-[20px]`}
             >
               Projects
             </Link>
 
             <Link
               href={"/home/contact"}
-              className="rounded px-3 py-2 font-serif text-lg transition-all hover:scale-125 hover:bg-purple-600 hover:shadow-lg"
+              className={`${
+                pathname === "/home/contact" ? "text-[#007bff]" : "text-gray-500"
+              } hover:text-[#007bff] block font-semibold text-[20px]`}
             >
               Contact
             </Link>

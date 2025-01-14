@@ -11,848 +11,589 @@ export const metadata: Metadata = {
 export default function ProyectosPage() {
   return (
     <>
-      <section className="container mx-auto max-w-screen-xl mb-56">
-        <div className="container mx-auto p-6 mt-10">
-          <h1 className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand">
-            Projects
-          </h1>
-        </div>
+      <div className="container mx-auto p-6 mt-10">
+        <h1 className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand">
+          Projects
+        </h1>
+      </div>
 
-        <div className="flex flex-wrap mt-7 fade-in">
-          <div className="w-full flex  items-center justify-center flex-col  md:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-105 transition-all transform">
+      <section className="flex justify-center items-center min-h-screen fade-in">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mb-10">
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link
+              href="https://contador-calorias-app.netlify.app/"
+              target="_blank"
+            >
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/caloriascontador.png"
+                alt=""
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
               <Link
-                target="_blank"
                 href="https://contador-calorias-app.netlify.app/"
+                target="_blank"
               >
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/caloriascontador.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Contador de Calorias App
+                </h5>
               </Link>
-              <div className="p-5">
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Project carried out as a practice with Typescript, React,
+                Tailwindcss, Toast, useReducer.
+              </p>
+              <div className="mt-auto">
                 <Link
-                  target="_blank"
                   href="https://contador-calorias-app.netlify.app/"
-                >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Calorias Contador App
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                  Application that helps you keep track of the calories you
-                  consume and expend through food and exercise
-                </p>
-
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-
-                <Link
                   target="_blank"
-                  href="https://contador-calorias-app.netlify.app/"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Visit
                   <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1 "
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
                   </svg>
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="w-full flex  items-center justify-center flex-col  md:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-105 transition-all transform">
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link
+              href="https://calculadorapropinas-cm.netlify.app/"
+              target="_blank"
+            >
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/calculadorapropinas.png"
+                alt=""
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
               <Link
-                target="_blank"
                 href="https://calculadorapropinas-cm.netlify.app/"
+                target="_blank"
               >
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/calculadorapropinas.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Tip and Consumption Calculator
+                </h5>
               </Link>
-              <div className="p-5">
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Project made with React, Tailwindcss, Typescript and Toast as a
+                practice
+              </p>
+              <div className="mt-auto">
                 <Link
-                  target="_blank"
                   href="https://calculadorapropinas-cm.netlify.app/"
-                >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Calculadora Propinas App
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                Application to calculate tips in a restaurant or business. 
-                </p>
-
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-
-                <Link
                   target="_blank"
-                  href="https://calculadorapropinas-cm.netlify.app/"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Visit
                   <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1 "
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
                   </svg>
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="w-full flex  items-center justify-center flex-col  md:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-105 transition-all transform">
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link
+              href="https://melodic-heliotrope-ee9356.netlify.app/"
+              target="_blank"
+            >
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/clima.png"
+                alt="clima app"
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
               <Link
-                target="_blank"
                 href="https://melodic-heliotrope-ee9356.netlify.app/"
+                target="_blank"
               >
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/clima.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  App to check the weather
+                </h5>
               </Link>
-              <div className="p-5">
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Project done with weather API, TS, Zod, tailwindcss, axios and
+                swal
+              </p>
+              <div className="mt-auto">
                 <Link
-                  target="_blank"
                   href="https://melodic-heliotrope-ee9356.netlify.app/"
-                >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Clima App
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                  Application created with react that shows the weather of the
-                  city of a country that you request.
-                </p>
-
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-
-                <Link
                   target="_blank"
-                  href="https://melodic-heliotrope-ee9356.netlify.app/"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Visit
                   <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1 "
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
                   </svg>
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2  flex  items-center justify-center flex-col ">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-110 transition">
-              <a
-                target="_blank"
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link
+              href="https://cotizadorautos-react.netlify.app/"
+              target="_blank"
+            >
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/cotizador.png"
+                alt="Cotizador App"
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
+              <Link
                 href="https://cotizadorautos-react.netlify.app/"
-              >
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/cotizador.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
-              </a>
-              <div className="p-5">
-                <Link
-                  target="_blank"
-                  href="https://cotizadorautos-react.netlify.app/"
-                >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Cotizador App
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                  Application created with React that shows a car quote.
-                </p>
-
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-
-                <Link
-                  target="_blank"
-                  href="https://cotizadorautos-react.netlify.app/"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
-                >
-                  Visit
-                  <svg
-                    aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2  flex  items-center justify-center flex-col ">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-110 transition">
-              <a target="_blank" href="https://bebidas-react-cm.netlify.app/">
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/bebidas.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
-              </a>
-              <div className="p-5">
-                <Link
-                  target="_blank"
-                  href="https://bebidas-router-dom.netlify.app/"
-                >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Bebidas App
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">
-                  Application that shows drink recipes.
-                </p>
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-                <Link
-                  target="_blank"
-                  href="https://bebidas-router-dom.netlify.app/"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
-                >
-                  Visit
-                  <svg
-                    aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2  flex  items-center justify-center flex-col ">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-110 transition">
-              <Link
                 target="_blank"
+              >
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Project made with react and tailwind{" "}
+                </h5>
+              </Link>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Application for making car insurance quotes
+              </p>
+              <div className="mt-auto">
+                <Link
+                  href="https://cotizadorautos-react.netlify.app/"
+                  target="_blank"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Visit
+                  <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link href="https://bebidas-react-cm.netlify.app/" target="_blank">
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/bebidas.png"
+                alt="Bebidas app"
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
+              <Link
+                href="https://bebidas-react-cm.netlify.app/"
+                target="_blank"
+              >
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Drinks Finder{" "}
+                </h5>
+              </Link>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Project done with TS, React Router Dom, Tailwindcss, Zustand, z
+                and swal.{" "}
+              </p>
+              <div className="mt-auto">
+                <Link
+                  href="https://bebidas-react-cm.netlify.app/"
+                  target="_blank"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Visit
+                  <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link
+              href="https://buscadorimagenes-cm.netlify.app//"
+              target="_blank"
+            >
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/imagenes.png"
+                alt="Buscador de imagenes app"
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
+              <Link
                 href="https://buscadorimagenes-cm.netlify.app//"
+                target="_blank"
               >
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/imagenes.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Image search application{" "}
+                </h5>
               </Link>
-              <div className="p-5">
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Mini project using the pixabay api to search for images
+              </p>
+              <div className="mt-auto">
                 <Link
-                  target="_blank"
                   href="https://buscadorimagenes-cm.netlify.app//"
-                >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Buscador de Imagenes
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                  Application to search for images without copyright.
-                </p>
-
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-
-                <Link
                   target="_blank"
-                  href="https://buscadorimagenes-cm.netlify.app//"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Visit
                   <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
                   </svg>
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2  flex  items-center justify-center flex-col ">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-110 transition">
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link
+              href="https://guitarla-cris-react.netlify.app/"
+              target="_blank"
+            >
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/guitarla.png"
+                alt="GuitarLA"
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
               <Link
-                target="_blank"
                 href="https://guitarla-cris-react.netlify.app/"
+                target="_blank"
               >
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/guitarla.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  LA Guitar Store{" "}
+                </h5>
               </Link>
-              <div className="p-5">
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Project made with React, Tailwindcss, SweetAlert and
+                LocalStorage for the shopping cart.{" "}
+              </p>
+              <div className="mt-auto">
                 <Link
-                  target="_blank"
                   href="https://guitarla-cris-react.netlify.app/"
-                >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    GuitarLA Store
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                  Guitar shop page with its shopping cart.
-                </p>
-
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-
-                <Link
                   target="_blank"
-                  href="https://guitarla-cris-react.netlify.app/"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Visit
                   <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
                   </svg>
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2  flex  items-center justify-center flex-col ">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-110 transition">
-              <Link target="_blank" href="https://recetas-bycm.netlify.app/">
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/receta.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link href="https://recetas-bycm.netlify.app/" target="_blank">
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/receta.png"
+                alt="Recetas app"
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
+              <Link href="https://recetas-bycm.netlify.app/" target="_blank">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Recipe Finder App{" "}
+                </h5>
               </Link>
-              <div className="p-5">
-                <Link target="_blank" href="https://recetas-bycm.netlify.app/">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Recetas Online
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                  Application where you can search for recipes for different
-                  foods and it will tell you the ingredients you need to make
-                  them.
-                </p>
-
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Mini Recipe Project with Themealdb API
+              </p>
+              <div className="mt-auto">
                 <Link
-                  target="_blank"
                   href="https://recetas-bycm.netlify.app/"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
+                  target="_blank"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Visit
                   <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
                   </svg>
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2  flex  items-center justify-center flex-col ">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-110 transition">
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link
+              href="https://pacientes-zustand-ts.netlify.app/"
+              target="_blank"
+            >
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/pacientes.png"
+                alt="Pacientes app"
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
               <Link
-                target="_blank"
                 href="https://pacientes-zustand-ts.netlify.app/"
+                target="_blank"
               >
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/pacientes.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Patients - Veterinary{" "}
+                </h5>
               </Link>
-              <div className="p-5">
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Project carried out as a practice with TS, Zustand, Taildwindcss
+                and Swal{" "}
+              </p>
+              <div className="mt-auto">
                 <Link
-                  target="_blank"
                   href="https://pacientes-zustand-ts.netlify.app/"
-                >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Pacientes Control
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                  Project carried out as a practice with TS, Zustand,
-                  Taildwindcss and Swal
-                </p>
-
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-
-                <Link
                   target="_blank"
-                  href="https://pacientes-zustand-ts.netlify.app/"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Visit
                   <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
                   </svg>
                 </Link>
               </div>
             </div>
           </div>
 
-
-
-
-
-
-          <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2  flex  items-center justify-center flex-col ">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-110 transition">
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link
+              href="https://cotizador-prestamos-cm.netlify.app/"
+              target="_blank"
+            >
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/gastoscontrol.png"
+                alt="Control de gastos"
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
               <Link
-                target="_blank"
                 href="https://cotizador-prestamos-cm.netlify.app/"
+                target="_blank"
               >
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/gastoscontrol.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Expense Control{" "}
+                </h5>
               </Link>
-              <div className="p-5">
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Expense project done with Context Api. reducer and ts, with
+                tailwindcss, toast and swal
+              </p>
+              <div className="mt-auto">
                 <Link
-                  target="_blank"
                   href="https://cotizador-prestamos-cm.netlify.app/"
-                >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Gastos Control
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                  Project carried out as a practice with TS, Zustand,
-                  Taildwindcss and Swal
-                </p>
-
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-
-                <Link
                   target="_blank"
-                  href="https://cotizador-prestamos-cm.netlify.app/"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Visit
                   <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
                   </svg>
                 </Link>
               </div>
             </div>
           </div>
 
-
-
-
-
-          <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2  flex  items-center justify-center flex-col ">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full md:hover:-translate-y-1 md:hover:scale-110 transition">
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link
+              href="https://blogcafe-cristiann.netlify.app/"
+              target="_blank"
+            >
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/coffeblog.png"
+                alt="Cafe blog"
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
               <Link
-                target="_blank"
                 href="https://blogcafe-cristiann.netlify.app/"
+                target="_blank"
               >
-                <Image
-                  className="rounded-t-lg object-cover w-full h-48 md:h-[190px]"
-                  src="/coffeblog.png"
-                  alt="hola"
-                  width={300}
-                  height={300}
-                  priority
-                />
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Coffee Blog{" "}
+                </h5>
               </Link>
-              <div className="p-5">
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Project done with nextjs Prisma TailwindCSS
+              </p>
+              <div className="mt-auto">
                 <Link
-                  target="_blank"
                   href="https://blogcafe-cristiann.netlify.app/"
-                >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Coffee Blog
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24">
-                  One of my first projects as a programmer, a coffee blog
-                </p>
-
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <Image
-                    src="/ts.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/react.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                  <Image
-                    src="/tw.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                    priority
-                  />
-                </div>
-
-                <Link
                   target="_blank"
-                  href="https://blogcafe-cristiann.netlify.app/"
-                  className="inline-flex items-center mt-10  bg-cyan-500 px-4 py-2 text-sm font-bold text-center text-white rounded-lg w-full md:w-full shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparen"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Visit
                   <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
                   </svg>
                 </Link>
               </div>
