@@ -60,8 +60,8 @@ export default function AboutmePage() {
               <span className="font-semibold text-blue-600">Node.js</span>,{" "}
               <span className="font-semibold text-blue-600">Express</span>,{" "}
               <span className="font-semibold text-blue-600">Tailwind CSS</span>,
-              and <span className="font-semibold text-blue-600">Next.js</span>.
-              and <span className="font-semibold text-blue-600">Zod</span>. and{" "}
+              <span className="font-semibold text-blue-600">Next.js</span> ,{" "}
+              <span className="font-semibold text-blue-600">Zod</span> and{" "}
               <span className="font-semibold text-blue-600">PostgreSql</span>.
             </div>
             <div>

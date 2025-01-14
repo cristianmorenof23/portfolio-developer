@@ -4,7 +4,7 @@ import Link from "next/link";
 const Carrousel = () => {
   return (
     <>
-      <div className="carousel  md:h-[280px] w-full md:w-[900px]">
+      <div className="carousel  md:h-[280px] w-full md:w-[900px] mx-auto">
         <div id="item1" className="carousel-item w-full">
           <Image
             src="/crashtracker1.png"
@@ -50,7 +50,7 @@ const Carrousel = () => {
           />
         </div>
       </div>
-      <div className="flex w-full justify-center gap-2 py-2 text-center items-center">
+      <div className="flex justify-center items-center text-center gap-7 mt-2 lg:ml-52">
         <Link href="#item1" className="btn btn-md">
           1
         </Link>
