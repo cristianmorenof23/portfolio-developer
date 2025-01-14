@@ -14,7 +14,7 @@ export default function AuthLayout({
   return (
     <>
       <div className="flex min-h-screen flex-col">
-        <header className="flex items-center justify-around p-6 shadow-lg md:flex-row flex-col text-center">
+        <header className="flex items-center justify-around p-6 shadow-lg md:flex-row flex-col text-center" id="inicio">
           {/* Logo */}
           <Link
             href={"/home/aboutme"}

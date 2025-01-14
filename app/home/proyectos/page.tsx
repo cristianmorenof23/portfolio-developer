@@ -235,7 +235,10 @@ export default function ProyectosPage() {
           </div>
 
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
-            <Link href="https://bebidas-router-dom.netlify.app/" target="_blank">
+            <Link
+              href="https://bebidas-router-dom.netlify.app/"
+              target="_blank"
+            >
               <Image
                 width={300}
                 height={300}
@@ -601,6 +604,26 @@ export default function ProyectosPage() {
           </div>
         </div>
       </section>
+      <div className="container mx-auto px-5">
+        <div className="flex justify-end m-5">
+          <Link href="#inicio" className="text-black cursor-pointer ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-10 h-10 animate-bounce hover:animate-none"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+              />
+            </svg>
+          </Link>
+        </div>
+      </div>
     </>
   );
 }
