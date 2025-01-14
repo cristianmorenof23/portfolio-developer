@@ -1,4 +1,5 @@
-"use client"
+"use client";
+import DropdownMenu from "@/components/DropdownMenu";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -21,15 +22,17 @@ export default function AuthLayout({
           >
             <div className="glitch text-3xl" data-text="Cristian Moreno">
               Cristian Moreno
-            </div>{" "}
+            </div>
           </Link>
 
           {/* Navigation */}
-          <nav className="flex md:gap-10 md:flex-row gap-4 flex-col mt-4 w-full text-center md:w-auto">
+          <nav className="hidden md:flex md:gap-10 md:flex-row gap-4 flex-col mt-4 w-full text-center md:w-auto">
             <Link
               href={"/home/aboutme"}
               className={`${
-                pathname === "/home/aboutme" ? "text-[#007bff]" : "text-gray-500"
+                pathname === "/home/aboutme"
+                  ? "text-[#007bff]"
+                  : "text-gray-500"
               } hover:text-[#007bff] block font-semibold text-[20px]`}
             >
               About Me
@@ -37,21 +40,29 @@ export default function AuthLayout({
             <Link
               href={"/home/proyectos"}
               className={`${
-                pathname === "/home/proyectos" ? "text-[#007bff]" : "text-gray-500"
+                pathname === "/home/proyectos"
+                  ? "text-[#007bff]"
+                  : "text-gray-500"
               } hover:text-[#007bff] block font-semibold text-[20px]`}
             >
               Projects
             </Link>
-
             <Link
               href={"/home/contact"}
               className={`${
-                pathname === "/home/contact" ? "text-[#007bff]" : "text-gray-500"
+                pathname === "/home/contact"
+                  ? "text-[#007bff]"
+                  : "text-gray-500"
               } hover:text-[#007bff] block font-semibold text-[20px]`}
             >
               Contact
             </Link>
           </nav>
+
+          {/* Dropdown Menu */}
+          <div className="md:hidden mt-7">
+            <DropdownMenu />
+          </div>
         </header>
 
         <main className="flex-grow">
