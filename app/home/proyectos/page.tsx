@@ -2,10 +2,10 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Proyectos - Cristian Moreno ",
+export const metadata : Metadata = {
+  title: "Projects - Cristian Moreno",
   description: "Portfolio Full stack Developer Cristian Moreno",
-  icons: "/crislogo.svg",
+  icons: "/cristianmorenocontact.jpg",
 };
 
 export default function ProyectosPage() {

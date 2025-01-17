@@ -1,78 +1,177 @@
 "use client";
-import DropdownMenu from "@/components/DropdownMenu";
-import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import LogoTipo from '../../components/ui/LogoTipo';
 
 export default function AuthLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  const pathname = usePathname(); // Obtén la ruta actual
+}) {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const pathname = usePathname();
+
+  const toggleNav = () => {
+    setIsNavOpen((prev) => !prev);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
 
   return (
     <>
       <div className="flex min-h-screen flex-col">
-        <header className="flex items-center justify-around p-6 shadow-lg md:flex-row flex-col text-center" id="inicio">
-          {/* Logo */}
-          <Link
-            href={"/home/aboutme"}
-            className="hover:scale-125 transition-all slide-in-top"
-          >
-            <div className="glitch text-3xl" data-text="Cristian Moreno">
-              Cristian Moreno
-            </div>
-          </Link>
+        <header className="absolute inset-x-0 top-0 z-50 py-6 shadow-lg bg-white">
+          <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
+            <nav className="w-full flex justify-between items-center gap-6 relative">
+              {/* Logo */}
+              <div className="inline-flex items-center">
+                <Link href="/" className="flex items-center gap-3">
+                  <div className="relative w-10 h-10 flex items-center justify-center">
+                    <LogoTipo/>
+                  </div>
+                  <span className="text-lg font-semibold text-gray-900">
+                    Cristian Moreno
+                  </span>
+                </Link>
+              </div>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex md:gap-10 md:flex-row gap-4 flex-col mt-4 w-full text-center md:w-auto">
-            <Link
-              href={"/home/aboutme"}
-              className={`${
-                pathname === "/home/aboutme"
-                  ? "text-[#007bff]"
-                  : "text-gray-500"
-              } hover:text-[#007bff] block font-semibold text-[20px]`}
-            >
-              About Me
-            </Link>
-            <Link
-              href={"/home/proyectos"}
-              className={`${
-                pathname === "/home/proyectos"
-                  ? "text-[#007bff]"
-                  : "text-gray-500"
-              } hover:text-[#007bff] block font-semibold text-[20px]`}
-            >
-              Projects
-            </Link>
-            <Link
-              href={"/home/contact"}
-              className={`${
-                pathname === "/home/contact"
-                  ? "text-[#007bff]"
-                  : "text-gray-500"
-              } hover:text-[#007bff] block font-semibold text-[20px]`}
-            >
-              Contact
-            </Link>
-          </nav>
+              {/* Toggle button */}
+              <button
+                onClick={toggleNav}
+                className="lg:hidden flex flex-col gap-1.5 w-8 h-8 relative z-50"
+              >
+                <span
+                  className={`block w-full h-0.5 bg-gray-700 transition-transform duration-300 ${
+                    isNavOpen ? "translate-y-2 rotate-45" : ""
+                  }`}
+                ></span>
+                <span
+                  className={`block w-full h-0.5 bg-gray-700 transition-opacity duration-300 ${
+                    isNavOpen ? "opacity-0" : ""
+                  }`}
+                ></span>
+                <span
+                  className={`block w-full h-0.5 bg-gray-700 transition-transform duration-300 ${
+                    isNavOpen ? "-translate-y-2 -rotate-45" : ""
+                  }`}
+                ></span>
+              </button>
 
-          {/* Dropdown Menu */}
-          <div className="md:hidden mt-7">
-            <DropdownMenu />
+              {/* Navbar (Modal) */}
+              <div
+                className={`fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300 lg:hidden ${
+                  isNavOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
+                onClick={closeNav}
+              >
+                <div
+                  className={`fixed top-0 left-0 w-3/4 h-full bg-white shadow-lg transition-transform duration-300 ${
+                    isNavOpen ? "translate-x-0" : "-translate-x-full"
+                  }`}
+                  onClick={(e) => e.stopPropagation()} // Evitar cerrar al hacer clic dentro del modal
+                >
+                  <ul className="flex flex-col items-start gap-6 p-6 mt-24">
+                    <li>
+                      <Link
+                        href="/home/aboutme"
+                        onClick={closeNav}
+                        className={`${
+                          pathname === "/home/aboutme"
+                            ? "text-blue-600"
+                            : "text-gray-600"
+                        } hover:text-blue-600 text-lg font-semibold`}
+                      >
+                        About Me
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/home/proyectos"
+                        onClick={closeNav}
+                        className={`${
+                          pathname === "/home/proyectos"
+                            ? "text-blue-600"
+                            : "text-gray-600"
+                        } hover:text-blue-600 text-lg font-semibold`}
+                      >
+                        Projects
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/home/contact"
+                        onClick={closeNav}
+                        className={`${
+                          pathname === "/home/contact"
+                            ? "text-blue-600"
+                            : "text-gray-600"
+                        } hover:text-blue-600 text-lg font-semibold`}
+                      >
+                        Contact
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Navbar (Visible for Large Screens) */}
+              <ul className="hidden lg:flex gap-8">
+                <li>
+                  <Link
+                    href="/home/aboutme"
+                    className={`${
+                      pathname === "/home/aboutme"
+                        ? "text-blue-600"
+                        : "text-gray-600"
+                    } hover:text-blue-600 text-lg font-semibold`}
+                  >
+                    About Me
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/home/proyectos"
+                    className={`${
+                      pathname === "/home/proyectos"
+                        ? "text-blue-600"
+                        : "text-gray-600"
+                    } hover:text-blue-600 text-lg font-semibold`}
+                  >
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/home/contact"
+                    className={`${
+                      pathname === "/home/contact"
+                        ? "text-blue-600"
+                        : "text-gray-600"
+                    } hover:text-blue-600 text-lg font-semibold`}
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+
+              {/* CTA */}
+              {/* <div className="hidden lg:flex">
+                <Link
+                  href="#"
+                  className="px-6 py-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700"
+                >
+                  Get Started
+                </Link>
+              </div> */}
+            </nav>
           </div>
         </header>
 
-        <main className="flex-grow">
-          <section className="grid grid-cols-2">
-            <div></div>
-            <div></div>
-          </section>
-        </main>
-        {children}
-
+        <main className="flex-grow mt-48">{children}</main>
         <footer className="flex justify-center bg-gray-900 px-4 py-12 font-sans tracking-wide text-white">
           <div className="text-center">
             <h6 className="text-lg text-gray-300">Stay connected with me:</h6>

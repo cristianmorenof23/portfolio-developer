@@ -1,5 +1,12 @@
 import Carrousel from "@/components/Carrousel";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Home - Cristian Moreno",
+  description: "Portfolio Full stack Developer Cristian Moreno",
+  icons: "/cristianmorenocontact.jpg",
+};
 
 export default function AboutmePage() {
   return (

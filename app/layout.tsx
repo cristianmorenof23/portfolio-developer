@@ -7,7 +7,7 @@ const outfit = Outfit({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Portfolio - Cristian Moreno",
   description: "Portfolio Full stack Developer Cristian Moreno",
-  icons: "/crislogo.svg",
+  icons: "/cristianmorenocontact.jpg",
 };
 
 export default function RootLayout({

@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Contact - Cristian Moreno",
   description: "Portfolio Full stack Developer Cristian Moreno",
-  icons: "/crislogo.svg",
+  icons: "/cristianmorenocontact.jpg",
 };
 
 export default function ContactPage() {
