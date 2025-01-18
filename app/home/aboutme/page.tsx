@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function AboutmePage() {
   return (
-    <div className="flex flex-col items-center justify-center px-6 py-12">
-      <div className="max-w-4xl text-center">
+    <div className="flex flex-col items-center justify-center px-6 py-12 ">
+      <div className="max-w-4xl text-center ">
         {/* Header */}
         <h2 className="text-3xl font-bold text-gray-800 md:text-4xl tracking-in-expand">
           Full Stack Developer{" "}

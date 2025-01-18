@@ -3,7 +3,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import LogoTipo from '../../components/ui/LogoTipo';
+import LogoTipo from "../../components/ui/LogoTipo";
+import NavFixed from "@/components/NavFixed";
 
 export default function AuthLayout({
   children,
@@ -31,7 +32,7 @@ export default function AuthLayout({
               <div className="inline-flex items-center">
                 <Link href="/" className="flex items-center gap-3">
                   <div className="relative w-10 h-10 flex items-center justify-center">
-                    <LogoTipo/>
+                    <LogoTipo />
                   </div>
                   <span className="text-lg font-semibold text-gray-900">
                     Cristian Moreno
@@ -171,7 +172,9 @@ export default function AuthLayout({
           </div>
         </header>
 
-        <main className="flex-grow mt-48">{children}</main>
+        <NavFixed />
+        <main className="flex-grow mt-12">{children}</main>
+
         <footer className="flex justify-center bg-gray-900 px-4 py-12 font-sans tracking-wide text-white">
           <div className="text-center">
             <h6 className="text-lg text-gray-300">Stay connected with me:</h6>
