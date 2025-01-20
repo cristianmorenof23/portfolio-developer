@@ -5,7 +5,7 @@ export default function NavFixed() {
   return (
     <>
       <div className="mt-24">
-        <div className="hidden right-5 sm:flex w-full flex-col items-end fixed mt-10 gap-8">
+        <div className="hidden right-2 sm:flex w-full flex-col items-end fixed mt-10 gap-8">
           <Link
             href="https://github.com/cristianmorenof23"
             target="_blank"

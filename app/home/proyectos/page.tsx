@@ -17,7 +17,7 @@ export default function ProyectosPage() {
         </h1>
       </div>
 
-      <section className="flex justify-center items-center min-h-screen fade-in">
+      <section className="flex justify-center items-center min-h-screen fade-in md:mr-7 mr-0">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mb-10">
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
             <Link
