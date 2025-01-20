@@ -14,10 +14,10 @@ export default function ContactPage() {
 
     emailjs
       .sendForm(
-        "service_nj425hu",
-        "template_1r9rxpk",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         form.current,
-        "nXdyF0XIgPs6fCSQn"
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
       )
       .then(
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -40,9 +40,10 @@ export default function ContactPage() {
           <Image
             src="/cristianmorenocontact.jpg"
             alt="imagen cristian moreno"
-            width={200}
-            height={200}
+            width={400}
+            height={400}
             className="rounded-full object-cover shadow-lg lg:h-[400px] lg:w-[400px]"
+            priority
           />
           <h1 className="text-3xl text-gray-700 font-bold mt-6">Contact</h1>
           <p className="font-medium text-xl text-gray-600 mt-2">
