@@ -11,13 +11,16 @@ export const metadata: Metadata = {
 export default function ProyectosPage() {
   return (
     <>
-      <div className="container mx-auto p-6 mt-10">
-        <h1 className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand">
-          Projects
-        </h1>
+      <div className="container mx-auto p-6 mt-10 text-center">
+        <div className="relative inline-block">
+          <span className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand ">
+            Projects
+          </span>
+          <span className="absolute inset-x-0 bottom-[20%] transform -translate-y-1/2 bg-cyan-400 h-[4px] opacity-75"></span>
+        </div>
       </div>
 
-      <section className="flex justify-center items-center min-h-screen fade-in md:mr-7 mr-0">
+      <section className="flex justify-center items-center min-h-screen fade-in md:mr-7 mr-0 mt-14">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mb-10">
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
             <Link

@@ -36,7 +36,7 @@ export default function ContactPage() {
     <>
       <section className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] min-h-screen">
         {/* Sección izquierda */}
-        <div className="flex flex-col items-center justify-center bg-gray-50 p-8 md:p-16">
+        <div className="flex flex-col items-center justify-center p-8 md:p-16">
           <Image
             src="/cristianmorenocontact.jpg"
             alt="imagen cristian moreno"
@@ -56,7 +56,7 @@ export default function ContactPage() {
         </div>
 
         {/* Línea divisoria */}
-        <div className="hidden md:block w-px bg-gray-300"></div>
+        <div className="hidden md:block w-px bg-gray-400"></div>
 
         {/* Sección derecha */}
         <div className="flex items-center justify-center bg-white p-8 md:p-16">

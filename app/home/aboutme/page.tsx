@@ -13,9 +13,14 @@ export default function AboutmePage() {
     <div className="flex flex-col items-center justify-center px-6 py-12 ">
       <div className="max-w-4xl text-center ">
         {/* Header */}
-        <h2 className="text-3xl font-bold text-gray-800 md:text-4xl tracking-in-expand">
-          Full Stack Developer{" "}
-        </h2>
+        <div className="container mx-auto p-6 mt-10 text-center">
+          <div className="relative inline-block">
+            <span className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand ">
+              Full Stack Developer
+            </span>
+            <span className="absolute inset-x-0 bottom-[20%] transform -translate-y-1/2 bg-cyan-400 h-[6px] opacity-75"></span>
+          </div>
+        </div>
         <p className="text-lg text-gray-500 mt-2">Systems Analyst</p>
 
         {/* Description */}
@@ -49,9 +54,14 @@ export default function AboutmePage() {
 
       <div className="flex flex-col items-center justify-center px-6 py-12">
         <div className="max-w-4xl text-center">
-          <h2 className="text-2xl font-bold text-gray-800 md:text-3xl tracking-in-expand">
-            Current Project
-          </h2>
+          <div className="container mx-auto p-6 mt-10 text-center">
+            <div className="relative inline-block">
+              <span className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand ">
+                Current Projects
+              </span>
+              <span className="absolute inset-x-0 bottom-[20%] transform -translate-y-1/2 bg-cyan-400 h-[4px] opacity-75"></span>
+            </div>
+          </div>
           <p className="text-xl text-gray-500 mt-2">
             <span className="text-yellow-400">Crash</span>
             <span className="text-violet-900">Tracker</span>

@@ -173,7 +173,7 @@ export default function AuthLayout({
         </header>
 
         <NavFixed />
-        <main className="flex-grow mt-12">{children}</main>
+        <main className="flex-grow">{children}</main>
 
         <footer className="flex justify-center bg-gray-900 px-4 py-12 font-sans tracking-wide text-white">
           <div className="text-center">
