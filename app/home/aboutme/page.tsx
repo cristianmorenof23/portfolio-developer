@@ -59,7 +59,7 @@ export default function AboutmePage() {
               <span className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand ">
                 Current Projects
               </span>
-              <span className="absolute inset-x-0 bottom-[20%] transform -translate-y-1/2 bg-cyan-400 h-[4px] opacity-75"></span>
+              <span className="absolute inset-x-0 bottom-[20%] transform -translate-y-1/2 bg-cyan-400 h-[6px] opacity-75"></span>
             </div>
           </div>
           <p className="text-xl text-gray-500 mt-2">
