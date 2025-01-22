@@ -42,7 +42,7 @@ export default function ContactPage() {
             alt="imagen cristian moreno"
             width={400}
             height={400}
-            className="rounded-full object-cover shadow-lg lg:h-[400px] lg:w-[400px]"
+            className="rounded-full object-cover shadow-lg lg:h-[400px] lg:w-[400px] fade-in"
             priority
           />
           <h1 className="text-3xl text-gray-700 font-bold mt-6">Contact</h1>
