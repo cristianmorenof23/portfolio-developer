@@ -128,7 +128,7 @@ export default function AuthLayout({
                       pathname === "/home/aboutme"
                         ? "text-blue-600"
                         : "text-gray-600"
-                    } hover:text-blue-600 text-lg font-semibold`}
+                    } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
                   >
                     About Me
                   </Link>
@@ -140,7 +140,7 @@ export default function AuthLayout({
                       pathname === "/home/proyectos"
                         ? "text-blue-600"
                         : "text-gray-600"
-                    } hover:text-blue-600 text-lg font-semibold`}
+                    } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
                   >
                     Projects
                   </Link>
@@ -152,7 +152,7 @@ export default function AuthLayout({
                       pathname === "/home/contact"
                         ? "text-blue-600"
                         : "text-gray-600"
-                    } hover:text-blue-600 text-lg font-semibold`}
+                    } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
                   >
                     Contact
                   </Link>

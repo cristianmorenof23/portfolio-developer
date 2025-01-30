@@ -18,7 +18,6 @@ export default function AboutmePage() {
             <span className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand ">
               Full Stack Developer
             </span>
-            <span className="absolute inset-x-0 bottom-[20%] transform -translate-y-1/2 bg-cyan-400 h-[6px] opacity-65"></span>
           </div>
         </div>
         <p className="text-lg text-gray-500 mt-2">Systems Analyst</p>
@@ -43,7 +42,7 @@ export default function AboutmePage() {
         <p className="mt-8 text-gray-600 text-lg">
           <Link
             href={"/home/proyectos"}
-            className="text-blue-600 font-semibold hover:underline transition-all"
+            className="text-blue-500  font-semibold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
           >
             Come see my projects ⟶
           </Link>
@@ -59,7 +58,6 @@ export default function AboutmePage() {
               <span className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand ">
                 Current Projects
               </span>
-              <span className="absolute inset-x-0 bottom-[20%] transform -translate-y-1/2 bg-cyan-400 h-[6px] opacity-65"></span>
             </div>
           </div>
           <p className="text-xl text-gray-500 mt-2">

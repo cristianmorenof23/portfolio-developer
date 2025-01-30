@@ -16,7 +16,6 @@ export default function ProyectosPage() {
           <span className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand ">
             Projects
           </span>
-          <span className="absolute inset-x-0 bottom-[20%] transform -translate-y-1/2 bg-cyan-400 h-[6px] opacity-65"></span>
         </div>
       </div>
 
