@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Outfit } from "next/font/google";
+import FlyonuiScript from "@/components/FlyonuiScript";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>{children}</body>
+      <FlyonuiScript />
     </html>
   );
 }

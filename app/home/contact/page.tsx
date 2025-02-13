@@ -67,13 +67,14 @@ export default function ContactPage() {
             className="w-full max-w-lg bg-gray-50 p-6 rounded-lg shadow-lg"
           >
             <h2 className="text-2xl font-bold text-gray-700 mb-4">
-            Send me a message            </h2>
+              Send me a message{" "}
+            </h2>
             <div className="mb-4">
               <label
                 htmlFor="name"
                 className="block text-gray-600 font-medium mb-1"
               >
-                Name: 
+                Name:
               </label>
               <input
                 type="text"
@@ -134,9 +135,9 @@ export default function ContactPage() {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white p-3 rounded-md font-bold hover:bg-blue-600 transition"
+              className="w-full bg-blue-500 text-white p-3 rounded-md font-bold hover:bg-blue-600 transition active:motion-preset-confetti motion-duration-700"
             >
-                SEND MESSAGE
+              SEND MESSAGE
             </button>
           </form>
         </div>

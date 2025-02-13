@@ -6,7 +6,7 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    
+    "./node_modules/flyonui/dist/js/accordion.js",
   ],
   theme: {
     extend: {
@@ -16,6 +16,10 @@ export default {
       },
     },
   },
-  plugins: [require('daisyui')],
-
+  plugins: [
+    require("daisyui"),
+    require("flyonui"),
+    require("flyonui/plugin"),
+    require("tailwindcss-motion"), // ✅ Asegurar que esté correctamente agregado
+  ],
 } satisfies Config;

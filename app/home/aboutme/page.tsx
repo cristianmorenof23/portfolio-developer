@@ -1,4 +1,4 @@
-import Carrousel from "@/components/Carrousel";
+import Carru from "@/components/ui/Carru";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -88,8 +88,8 @@ export default function AboutmePage() {
           </div>
 
           {/* Make the carousel responsive */}
-          <div className="w-full lg:w-3/4">
-            <Carrousel />
+          <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto">
+            <Carru />
           </div>
         </div>
       </div>
