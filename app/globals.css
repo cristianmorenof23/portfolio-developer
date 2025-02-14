@@ -17,12 +17,23 @@
 }
 
 html {
+  --bg-color: white;  
+  --text-color: black;
   scroll-behavior: smooth;
 }
+
+[data-theme="luxury"] {
+  --bg-color: #333; /* Fondo oscuro */
+  --text-color: white; /* Texto blanco */
+}
+
+
 
 body {
   color: var(--foreground);
   background: var(--background);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: 'Varela', sans-serif;
   font-family: "Raleway", sans-serif;
 }

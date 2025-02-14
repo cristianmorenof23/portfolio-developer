@@ -1,7 +1,10 @@
+/* eslint-disable @next/next/no-css-tags */
 import type { Metadata } from "next";
 import "./globals.css";
 import { Outfit } from "next/font/google";
 import FlyonuiScript from "@/components/FlyonuiScript";
+import Head from "next/head";
+import Script from "next/script"; // 🔥 Importa Script
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -18,8 +21,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={outfit.className}>{children}</body>
-      <FlyonuiScript />
+      <Head>
+        <link rel="stylesheet" href="/waves.min.css" />
+      </Head>
+      <body className={outfit.className}>
+        {children}
+
+        {/* Script optimizado con Next.js */}
+        <Script src="/path/to/waves.min.js" strategy="lazyOnload" />
+        
+        <FlyonuiScript />
+      </body>
     </html>
   );
 }

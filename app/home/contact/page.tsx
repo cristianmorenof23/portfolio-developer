@@ -36,7 +36,7 @@ export default function ContactPage() {
     <>
       <section className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] min-h-screen">
         {/* Sección izquierda */}
-        <div className="flex flex-col items-center justify-center p-8 md:p-16">
+        <div className="flex flex-col items-center justify-center p-8 md:p-16 dark:bg-gray-800">
           <Image
             src="/cristianmorenocontact.jpg"
             alt="imagen cristian moreno"
@@ -45,12 +45,12 @@ export default function ContactPage() {
             className="rounded-full object-cover shadow-lg lg:h-[400px] lg:w-[400px] fade-in"
             priority
           />
-          <h1 className="text-3xl text-gray-700 font-bold mt-6">Contact</h1>
-          <p className="font-medium text-xl text-gray-600 mt-2">
+          <h1 className="text-3xl text-gray-700 font-bold mt-6 dark:text-white">Contact</h1>
+          <p className="font-medium text-xl text-gray-600 mt-2 dark:text-white">
             Argentina, Córdoba
           </p>
-          <p className="font-medium text-lg text-gray-600">+54 3513336631</p>
-          <p className="font-medium text-lg text-gray-600 mb-6">
+          <p className="font-medium text-lg text-gray-600 dark:text-white">+54 3513336631</p>
+          <p className="font-medium text-lg text-gray-600 mb-6 dark:text-white">
             cristian.morenof@hotmail.com
           </p>
         </div>
@@ -59,13 +59,13 @@ export default function ContactPage() {
         <div className="hidden md:block w-px bg-gray-400"></div>
 
         {/* Sección derecha */}
-        <div className="flex items-center justify-center bg-white p-8 md:p-16">
+        <div className="flex items-center justify-center bg-white dark:bg-gray-800 p-8 md:p-16 dark:bg-none">
           <Toaster />
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="w-full max-w-lg bg-gray-50 p-6 rounded-lg shadow-lg"
-          >
+            className="w-full max-w-lg bg-gray-50  p-6 rounded-lg shadow-lg"
+            >
             <h2 className="text-2xl font-bold text-gray-700 mb-4">
               Send me a message{" "}
             </h2>

@@ -15,15 +15,17 @@ export default function AboutmePage() {
         {/* Header */}
         <div className="container mx-auto p-6 mt-10 text-center">
           <div className="relative inline-block">
-            <span className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand ">
+            <span className="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white text-center tracking-in-expand  dark:bg-gradient-to-r dark:from-primary dark:to-error dark:bg-clip-text dark:text-transparent dark:w-fit">
               Full Stack Developer
             </span>
           </div>
         </div>
-        <p className="text-lg text-gray-500 mt-2">Systems Analyst</p>
+        <p className="text-lg text-gray-500 mt-2 dark:text-white">
+          Systems Analyst
+        </p>
 
         {/* Description */}
-        <div className="mt-8 space-y-4 text-lg text-gray-700 leading-relaxed">
+        <div className="mt-8 space-y-4 text-lg text-gray-700 leading-relaxed dark:text-white">
           <p>
             I have knowledge in{" "}
             <span className="font-semibold text-blue-600">TypeScript</span>,{" "}
@@ -42,7 +44,7 @@ export default function AboutmePage() {
         <p className="mt-8 text-gray-600 text-lg">
           <Link
             href={"/home/proyectos"}
-            className="text-blue-500  font-semibold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+            className="text-blue-600  font-semibold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
           >
             Come see my projects ⟶
           </Link>
@@ -55,7 +57,7 @@ export default function AboutmePage() {
         <div className="max-w-4xl text-center">
           <div className="container mx-auto p-6 mt-10 text-center">
             <div className="relative inline-block">
-              <span className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand ">
+              <span className="text-3xl font-bold text-gray-800 dark:text-white md:text-4xl text-center tracking-in-expand dark:bg-gradient-to-r dark:from-primary dark:to-error dark:bg-clip-text dark:text-transparent dark:w-fit">
                 Current Projects
               </span>
             </div>
@@ -67,23 +69,25 @@ export default function AboutmePage() {
 
           <div className="mt-8 space-y-4 text-lg text-gray-700 leading-relaxed mb-6">
             <div>
-              <p>I am working on a Crash Tracker project, full stack with </p>
-              <span className="font-semibold text-blue-600">
-                {" "}
-                TypeScript{" "}
-              </span>,{" "}
+              <p className="dark:text-white">
+                I am working on a Crash Tracker project, full stack with{" "}
+              </p>
+              <span className="font-semibold text-blue-600"> TypeScript </span>,{" "}
               <span className="font-semibold text-blue-600">Node.js</span>,{" "}
               <span className="font-semibold text-blue-600">Express</span>,{" "}
               <span className="font-semibold text-blue-600">Tailwind CSS</span>,
               <span className="font-semibold text-blue-600">Next.js</span> ,{" "}
-              <span className="font-semibold text-blue-600">Zod</span> and{" "}
+              <span className="font-semibold text-blue-600">Zod</span>{" "}
+              <span className="dark:text-white">and </span>
               <span className="font-semibold text-blue-600">PostgreSql</span>.
             </div>
             <div>
-              <p>
+              <p className="dark:text-white">
                 Where you can create an account, with its proper validation and
               </p>
-              then start to be able to create different budgets.
+              <p className="dark:text-white">
+                then start to be able to create different budgets.
+              </p>
             </div>
           </div>
 

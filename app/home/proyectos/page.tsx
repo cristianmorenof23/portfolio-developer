@@ -13,7 +13,7 @@ export default function ProyectosPage() {
     <>
       <div className="container mx-auto p-6 mt-10 text-center">
         <div className="relative inline-block">
-          <span className="text-3xl font-bold text-gray-800 md:text-4xl text-center tracking-in-expand ">
+          <span className="text-3xl font-bold text-gray-800 dark:text-white md:text-4xl text-center tracking-in-expand dark:bg-gradient-to-r dark:from-primary dark:to-error dark:bg-clip-text dark:text-transparent dark:w-fit ">
             Projects
           </span>
         </div>

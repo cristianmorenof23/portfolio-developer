@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import LogoTipo from "../../components/ui/LogoTipo";
 import NavFixed from "@/components/NavFixed";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function AuthLayout({
   children,
@@ -24,8 +25,8 @@ export default function AuthLayout({
 
   return (
     <>
-      <div className="flex min-h-screen flex-col">
-        <header className="absolute inset-x-0 top-0 z-50 py-6 shadow-lg bg-white">
+      <div className="flex min-h-screen flex-col bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+        <header className="absolute inset-x-0 top-0 z-50 py-6 shadow-lg bg-white dark:bg-gray-800">
           <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
             <nav className="w-full flex justify-between items-center gap-6 relative">
               {/* Logo */}
@@ -34,11 +35,12 @@ export default function AuthLayout({
                   <div className="relative w-10 h-10 flex items-center justify-center">
                     <LogoTipo />
                   </div>
-                  <span className="text-lg font-semibold text-gray-900">
+                  <span className="text-lg font-semibold text-gray-900  dark:bg-gradient-to-r dark:from-primary dark:to-error dark:bg-clip-text dark:text-transparent dark:w-fit">
                     Cristian Moreno
                   </span>
                 </Link>
               </div>
+              <ThemeToggle />
 
               {/* Toggle button */}
               <button
@@ -79,12 +81,11 @@ export default function AuthLayout({
                     <li>
                       <Link
                         href="/home/aboutme"
-                        onClick={closeNav}
                         className={`${
                           pathname === "/home/aboutme"
-                            ? "text-blue-600"
-                            : "text-gray-600"
-                        } hover:text-blue-600 text-lg font-semibold`}
+                            ? "text-blue-600 dark:text-blue-400"
+                            : "text-gray-600 dark:text-gray-300"
+                        } hover:text-blue-600 dark:hover:text-blue-400 text-lg font-semibold`}
                       >
                         About Me
                       </Link>
@@ -95,9 +96,9 @@ export default function AuthLayout({
                         onClick={closeNav}
                         className={`${
                           pathname === "/home/proyectos"
-                            ? "text-blue-600"
-                            : "text-gray-600"
-                        } hover:text-blue-600 text-lg font-semibold`}
+                            ? "text-blue-600 dark:text-blue-400"
+                            : "text-gray-600 dark:text-gray-300"
+                        } hover:text-blue-600 dark:hover:text-blue-400 text-lg font-semibold`}
                       >
                         Projects
                       </Link>
@@ -108,9 +109,9 @@ export default function AuthLayout({
                         onClick={closeNav}
                         className={`${
                           pathname === "/home/contact"
-                            ? "text-blue-600"
-                            : "text-gray-600"
-                        } hover:text-blue-600 text-lg font-semibold`}
+                            ? "text-blue-600 dark:text-blue-400"
+                            : "text-gray-600 dark:text-gray-300"
+                        } hover:text-blue-600 dark:hover:text-blue-400 text-lg font-semibold`}
                       >
                         Contact
                       </Link>
@@ -126,9 +127,9 @@ export default function AuthLayout({
                     href="/home/aboutme"
                     className={`${
                       pathname === "/home/aboutme"
-                        ? "text-blue-600"
-                        : "text-gray-600"
-                    } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
+                        ? "text-blue-600 "
+                        : "text-gray-600 dark:text-white"
+                    } text-blue-500   font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 dark:before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
                   >
                     About Me
                   </Link>
@@ -139,8 +140,8 @@ export default function AuthLayout({
                     className={`${
                       pathname === "/home/proyectos"
                         ? "text-blue-600"
-                        : "text-gray-600"
-                    } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
+                        : "text-gray-600 dark:text-white"
+                    } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 dark:before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
                   >
                     Projects
                   </Link>
@@ -151,8 +152,8 @@ export default function AuthLayout({
                     className={`${
                       pathname === "/home/contact"
                         ? "text-blue-600"
-                        : "text-gray-600"
-                    } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
+                        : "text-gray-600 dark:text-white"
+                    } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500  dark:before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
                   >
                     Contact
                   </Link>
@@ -175,7 +176,7 @@ export default function AuthLayout({
         <NavFixed />
         <main className="flex-grow">{children}</main>
 
-        <footer className="flex justify-center bg-gray-900 px-4 py-12 font-sans tracking-wide text-white">
+        <footer className="flex justify-center bg-gray-900 px-4 py-12 text-white dark:bg-gray-600">
           <div className="text-center">
             <h6 className="text-lg text-gray-300">Stay connected with me:</h6>
             <ul className="mb-8 mt-4 flex flex-wrap justify-center gap-4 gap-x-8">
