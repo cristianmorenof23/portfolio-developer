@@ -9,14 +9,14 @@ export default function NavFixed() {
           <Link
             href="https://github.com/cristianmorenof23"
             target="_blank"
-            className="text-black cursor-pointer"
+            className="text-black cursor-pointer dark:text-white"
           >
             <Image
               width={25}
               height={25}
               src="/github-logo_icon-icons.com_73546.png"
               alt="github logo"
-              className=" text-2xl transition hover:-translate-y-1 hover:scale-110 text-white"
+              className=" text-2xl transition hover:-translate-y-1 hover:scale-110 text-white "
             />
           </Link>
           <Link

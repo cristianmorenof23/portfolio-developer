@@ -1,4 +1,4 @@
-import Carru from "@/components/ui/Carru";
+import Diff from "@/components/ui/Diff";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -9,13 +9,15 @@ export const metadata: Metadata = {
 };
 
 export default function AboutmePage() {
-  return (
-    <div className="flex flex-col items-center justify-center px-6 py-12 ">
-      <div className="max-w-4xl text-center ">
-        {/* Header */}
+  return  (
+    <div className="relative flex flex-col items-center justify-center px-6 py-12 overflow-hidden">
+      {/* Fondo de ondas */}
+
+      <div className="max-w-4xl text-center relative z-10">
+        {/* Contenido de tu página */}
         <div className="container mx-auto p-6 mt-10 text-center">
           <div className="relative inline-block">
-            <span className="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white text-center tracking-in-expand  dark:bg-gradient-to-r dark:from-primary dark:to-error dark:bg-clip-text dark:text-transparent dark:w-fit">
+            <span className="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white text-center tracking-in-expand dark:bg-gradient-to-r dark:from-primary dark:to-error dark:bg-clip-text dark:text-transparent dark:w-fit">
               Full Stack Developer
             </span>
           </div>
@@ -24,7 +26,7 @@ export default function AboutmePage() {
           Systems Analyst
         </p>
 
-        {/* Description */}
+        {/* Descripción */}
         <div className="mt-8 space-y-4 text-lg text-gray-700 leading-relaxed dark:text-white">
           <p>
             I have knowledge in{" "}
@@ -40,22 +42,22 @@ export default function AboutmePage() {
           </p>
         </div>
 
-        {/* Call to Action */}
+        {/* Enlace a proyectos */}
         <p className="mt-8 text-gray-600 text-lg">
           <Link
             href={"/home/proyectos"}
-            className="text-blue-600  font-semibold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+            className="text-blue-600 font-semibold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
           >
             Come see my projects ⟶
           </Link>
         </p>
       </div>
 
-      <hr className="my-12 w-full border-t-2 border-gray-300" />
+      <hr className="my-12 w-full border-t-2 border-gray-300 relative z-10" />
 
-      <div className="flex flex-col items-center justify-center px-6 py-12">
+      <div className="flex flex-col items-center justify-center px-6 py-12 relative z-10">
         <div className="max-w-4xl text-center">
-          <div className="container mx-auto p-6 mt-10 text-center">
+          <div className="container mx-auto p-6 mt-2 text-center">
             <div className="relative inline-block">
               <span className="text-3xl font-bold text-gray-800 dark:text-white md:text-4xl text-center tracking-in-expand dark:bg-gradient-to-r dark:from-primary dark:to-error dark:bg-clip-text dark:text-transparent dark:w-fit">
                 Current Projects
@@ -91,9 +93,9 @@ export default function AboutmePage() {
             </div>
           </div>
 
-          {/* Make the carousel responsive */}
+          {/* Carrusel */}
           <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto">
-            <Carru />
+            <Diff/>
           </div>
         </div>
       </div>
