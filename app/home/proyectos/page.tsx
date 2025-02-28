@@ -21,6 +21,62 @@ export default function ProyectosPage() {
 
       <section className="flex justify-center items-center min-h-screen fade-in md:mr-7 mr-0 mt-14">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mb-10">
+
+
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <Link
+              href="https://santiagocirio-personaltrainer.vercel.app/home/inicio"
+              target="_blank"
+            >
+              <Image
+                width={300}
+                height={300}
+                className="rounded-t-lg w-full hover:scale-110 transition-all"
+                src="/gim1.jpg"
+                alt=""
+                priority
+              />
+            </Link>
+            <div className="p-5 flex flex-col flex-1">
+              <Link
+                href="https://santiagocirio-personaltrainer.vercel.app/home/inicio"
+                target="_blank"
+              >
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Santiago Cirio - Personal Trainer
+                </h5>
+              </Link>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Project done for a personal trainer with next.js and tailwindcss.
+              </p>
+              <div className="mt-auto">
+                <Link
+                  href="https://santiagocirio-personaltrainer.vercel.app/home/inicio"
+                  target="_blank"
+                  className="inline-flex w-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Visit
+                  <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
             <Link
               href="https://contador-calorias-app.netlify.app/"
