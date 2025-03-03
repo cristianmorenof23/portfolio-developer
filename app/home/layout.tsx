@@ -25,8 +25,10 @@ export default function AuthLayout({
 
   return (
     <>
-      <div className="flex min-h-screen flex-col bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-        <header className="absolute inset-x-0 top-0 z-50 py-6 shadow-lg bg-white dark:bg-gray-800">
+
+
+      <div className=" relative z-10 flex min-h-screen flex-col bg-transparent text-gray-900 dark:bg-gray-900 dark:text-white ">
+        <header className="absolute inset-x-0 top-0 z-50 py-6 shadow-lg bg-transparent dark:bg-gray-800">
           <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
             <nav className="w-full flex justify-between items-center gap-6 relative">
               {/* Logo */}
@@ -48,44 +50,38 @@ export default function AuthLayout({
                 className="lg:hidden flex flex-col gap-1.5 w-8 h-8 relative z-50"
               >
                 <span
-                  className={`block w-full h-0.5 bg-gray-700 transition-transform duration-300 ${
-                    isNavOpen ? "translate-y-2 rotate-45" : ""
-                  }`}
+                  className={`block w-full h-0.5 bg-gray-700 transition-transform duration-300 ${isNavOpen ? "translate-y-2 rotate-45" : ""
+                    }`}
                 ></span>
                 <span
-                  className={`block w-full h-0.5 bg-gray-700 transition-opacity duration-300 ${
-                    isNavOpen ? "opacity-0" : ""
-                  }`}
+                  className={`block w-full h-0.5 bg-gray-700 transition-opacity duration-300 ${isNavOpen ? "opacity-0" : ""
+                    }`}
                 ></span>
                 <span
-                  className={`block w-full h-0.5 bg-gray-700 transition-transform duration-300 ${
-                    isNavOpen ? "-translate-y-2 -rotate-45" : ""
-                  }`}
+                  className={`block w-full h-0.5 bg-gray-700 transition-transform duration-300 ${isNavOpen ? "-translate-y-2 -rotate-45" : ""
+                    }`}
                 ></span>
               </button>
 
               {/* Navbar (Modal) */}
               <div
-                className={`fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300 lg:hidden ${
-                  isNavOpen ? "opacity-100 visible" : "opacity-0 invisible"
-                }`}
+                className={`fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300 lg:hidden ${isNavOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
                 onClick={closeNav}
               >
                 <div
-                  className={`fixed top-0 left-0 w-3/4 h-full bg-white shadow-lg transition-transform duration-300 ${
-                    isNavOpen ? "translate-x-0" : "-translate-x-full"
-                  }`}
+                  className={`fixed top-0 left-0 w-3/4 h-full bg-white shadow-lg transition-transform duration-300 ${isNavOpen ? "translate-x-0" : "-translate-x-full"
+                    }`}
                   onClick={(e) => e.stopPropagation()} // Evitar cerrar al hacer clic dentro del modal
                 >
                   <ul className="flex flex-col items-start gap-6 p-6 mt-24">
                     <li>
                       <Link
                         href="/home/aboutme"
-                        className={`${
-                          pathname === "/home/aboutme"
-                            ? "text-blue-600 dark:text-blue-400"
-                            : "text-gray-600 dark:text-gray-300"
-                        } hover:text-blue-600 dark:hover:text-blue-400 text-lg font-semibold`}
+                        className={`${pathname === "/home/aboutme"
+                          ? "text-blue-600 dark:text-blue-400"
+                          : "text-gray-600 dark:text-gray-300"
+                          } hover:text-blue-600 dark:hover:text-blue-400 text-lg font-semibold`}
                       >
                         About Me
                       </Link>
@@ -94,11 +90,10 @@ export default function AuthLayout({
                       <Link
                         href="/home/proyectos"
                         onClick={closeNav}
-                        className={`${
-                          pathname === "/home/proyectos"
-                            ? "text-blue-600 dark:text-blue-400"
-                            : "text-gray-600 dark:text-gray-300"
-                        } hover:text-blue-600 dark:hover:text-blue-400 text-lg font-semibold`}
+                        className={`${pathname === "/home/proyectos"
+                          ? "text-blue-600 dark:text-blue-400"
+                          : "text-gray-600 dark:text-gray-300"
+                          } hover:text-blue-600 dark:hover:text-blue-400 text-lg font-semibold`}
                       >
                         Projects
                       </Link>
@@ -107,11 +102,10 @@ export default function AuthLayout({
                       <Link
                         href="/home/contact"
                         onClick={closeNav}
-                        className={`${
-                          pathname === "/home/contact"
-                            ? "text-blue-600 dark:text-blue-400"
-                            : "text-gray-600 dark:text-gray-300"
-                        } hover:text-blue-600 dark:hover:text-blue-400 text-lg font-semibold`}
+                        className={`${pathname === "/home/contact"
+                          ? "text-blue-600 dark:text-blue-400"
+                          : "text-gray-600 dark:text-gray-300"
+                          } hover:text-blue-600 dark:hover:text-blue-400 text-lg font-semibold`}
                       >
                         Contact
                       </Link>
@@ -125,11 +119,10 @@ export default function AuthLayout({
                 <li>
                   <Link
                     href="/home/aboutme"
-                    className={`${
-                      pathname === "/home/aboutme"
-                        ? "text-blue-600 "
-                        : "text-gray-600 dark:text-white"
-                    } text-blue-500   font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 dark:before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
+                    className={`${pathname === "/home/aboutme"
+                      ? "text-blue-600 "
+                      : "text-gray-600 dark:text-white"
+                      } text-blue-500   font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 dark:before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
                   >
                     About Me
                   </Link>
@@ -137,11 +130,10 @@ export default function AuthLayout({
                 <li>
                   <Link
                     href="/home/proyectos"
-                    className={`${
-                      pathname === "/home/proyectos"
-                        ? "text-blue-600"
-                        : "text-gray-600 dark:text-white"
-                    } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 dark:before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
+                    className={`${pathname === "/home/proyectos"
+                      ? "text-blue-600"
+                      : "text-gray-600 dark:text-white"
+                      } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500 dark:before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
                   >
                     Projects
                   </Link>
@@ -149,11 +141,10 @@ export default function AuthLayout({
                 <li>
                   <Link
                     href="/home/contact"
-                    className={`${
-                      pathname === "/home/contact"
-                        ? "text-blue-600"
-                        : "text-gray-600 dark:text-white"
-                    } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500  dark:before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
+                    className={`${pathname === "/home/contact"
+                      ? "text-blue-600"
+                      : "text-gray-600 dark:text-white"
+                      } text-blue-500  font-bold relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-[-2px] before:h-[2px] before:bg-blue-500  dark:before:bg-blue-600 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
                   >
                     Contact
                   </Link>
@@ -168,7 +159,7 @@ export default function AuthLayout({
                 >
                   Get Started
                 </Link>
-              </div> */}
+                </div> */}
             </nav>
           </div>
         </header>
@@ -218,7 +209,7 @@ export default function AuthLayout({
                     src="/linkedin_icon-icons.com_65929.png"
                     alt="linkedin logo"
                     className="h-10 w-10 text-2xl transition hover:-translate-y-1 hover:scale-110"
-                  />
+                    />
                 </Link>
               </div>
             </ul>
